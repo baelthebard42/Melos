@@ -1,13 +1,13 @@
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.responses import StreamingResponse, JSONResponse, FileResponse
-from utils import process_audio
+from deep_learning.utils import process_audio
 from io import BytesIO
 import torchaudio, torch
 import math, os
 import uvicorn
 import zipfile
 
-MODEL_PATH_BASE = "./models" 
+MODEL_PATH_BASE = "./deep_learning/models" 
 
 VOICE_MODEL = 'voicemodelp2.pth'
 INSTRUMENT_MODEL = 'multisepmodelp1.pth'

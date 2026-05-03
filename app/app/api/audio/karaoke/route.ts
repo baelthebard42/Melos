@@ -51,7 +51,7 @@ export async function POST(request: NextRequest) {
     mergeForm.append("track1", file2, "file2.wav");
     mergeForm.append("track2", wavBlob, "split.wav");
 
-    const mergeResponse = await fetch("http://localhost:8000/karaoke-merge", {
+    const mergeResponse = await fetch("http://0.0.0.0:8000/karaoke-merge", {
       method: "POST",
       body: mergeForm,
     });
